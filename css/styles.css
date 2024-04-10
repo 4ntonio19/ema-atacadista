@@ -1,0 +1,68 @@
+:root {
+  --green: #137834;
+  --blue: #223a74;
+  --gray: #efefef;
+  --white: #ffffff;
+  font-family: Poppins;
+}
+/* Aqui começa o style */
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 0 0;
+  margin: 0 0;
+  box-sizing: border-box;
+  background-color: var(--gray);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  background-color: var(--white);
+}
+
+.container-header {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.container-header-logo {
+  width: 10rem;
+  height: 6rem;
+}
+
+.container-header-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  color: var(--blue);
+  font-weight: 500;
+  font-size: 1.2rem;
+  list-style: none;
+}
+
+.container-header-contacts {
+  display: flex;
+  gap: 1rem;
+}
+
+.container-header-contacts-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-header-contacts-button > button {
+  background-color: var(--green);
+  border-radius: 6px;
+  border-color: var(--green);
+  color: var(--white);
+  padding: 12px 30px;
+  font-weight: 500;
+}
+
+main > img {
+  width: 100%;
+}
