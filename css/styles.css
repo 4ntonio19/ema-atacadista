@@ -4,65 +4,233 @@
   --gray: #efefef;
   --white: #ffffff;
   font-family: Poppins;
+  box-sizing: border-box;
 }
-/* Aqui começa o style */
+
 body {
   width: 100vw;
   height: 100vh;
-  padding: 0 0;
-  margin: 0 0;
-  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   background-color: var(--gray);
 }
-
+/* header style */
 header {
   display: flex;
   justify-content: center;
   background-color: var(--white);
+  width: 100%;
 }
 
 .container-header {
   width: 80%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
 }
 
 .container-header-logo {
-  width: 10rem;
-  height: 6rem;
+  width: 7rem;
+}
+
+.container-header-menu-button {
+  align-self: center;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.container-header-dropdown {
+  display: none;
+  top: 100%;
+  background-color: var(--white);
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out,
+    transform 0.5s ease-out;
+}
+
+.container-header-dropdown.show {
+  display: block;
+  opacity: 1;
+  animation: dropdown-show 0.5s ease-out;
+}
+
+@keyframes dropdown-show {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .container-header-list {
-  display: flex;
-  justify-content: space-between;
-  gap: 4rem;
-  color: var(--blue);
-  font-weight: 500;
-  font-size: 1.2rem;
   list-style: none;
+  padding: 10px;
+}
+
+.container-header-list li {
+  padding: 5px 0;
+  color: var(--blue);
+  display: flex;
+  justify-content: center;
+}
+
+.container-header-list li:hover {
+  background-color: #ccc;
 }
 
 .container-header-contacts {
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
 }
 
 .container-header-contacts-links {
   display: flex;
-  flex-direction: column;
+  align-items: center;
 }
 
-.container-header-contacts-button > button {
+.container-header-contacts-links img {
+  margin: 0 5px;
+  width: 20px;
+}
+
+.container-header-contacts-button {
+  padding: 10px 15px;
+  border: 1px solid var(--green);
+  border-radius: 4px;
   background-color: var(--green);
-  border-radius: 6px;
-  border-color: var(--green);
+  cursor: pointer;
   color: var(--white);
-  padding: 12px 30px;
-  font-weight: 500;
 }
 
-main > img {
+@media only screen and (max-width: 768px) {
+  header {
+    position: relative;
+    height: auto;
+    transition: height 0.5s ease-in-out;
+  }
+
+  .container-header {
+    width: 90%;
+    justify-content: space-between;
+  }
+
+  .container-header-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+  }
+
+  .container-header-list {
+    padding: 0;
+  }
+
+  .container-header-list li {
+    font-size: 16px;
+  }
+
+  .container-header-contacts-button {
+    margin-right: 1rem;
+  }
+
+  .container-header-dropdown.show {
+    max-height: 300px;
+  }
+
+  .container-header-contacts {
+    border-top: 1px solid #ddd;
+  }
+
+  .container-header-dropdown:not(.show) {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+.desktop-background,
+.mobile-background {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .mobile-background {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .desktop-background {
+    display: block;
+  }
+
+  .container-header-logo {
+    width: 7.5rem;
+    height: 5.5rem;
+  }
+
+  .container-header {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .container-header-list {
+    text-align: center;
+    margin: 0;
+    display: flex;
+    gap: 2rem;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  .container-header-contacts {
+    justify-content: flex-end;
+  }
+
+  .container-header-menu-button {
+    display: none;
+  }
+
+  .container-header-dropdown {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .container-header-contacts-button {
+    padding: 12px 17px;
+  }
+}
+
+@media only screen and (max-width: 1039px) and (min-width: 769px) {
+  .container-header-logo {
+    width: 7.5rem;
+    height: 5.5rem;
+  }
+
+  .container-header-list {
+    font-size: 1rem;
+  }
+
+  .container-header-contacts-button {
+    padding: 10px 15px;
+  }
+}
+
+main img {
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
