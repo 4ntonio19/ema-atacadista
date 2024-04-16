@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -54,7 +54,7 @@
     </header>
     <main>
       <img
-        src="./assets/banner---ema-atacadista.png"
+        src="./assets/desktop.png"
         class="desktop-background"
         alt="imagem de fundo desktop"
       />
@@ -130,7 +130,7 @@
               <p>LORENZETTI</p>
             </div>
             <div class="swiper-slide">
-              <img src="./assets/brands/Maxplast.jpg" alt="" />
+              <img src="./assets/brands/maxplast.png" alt="" />
               <p>MAXPLAST</p>
             </div>
             <div class="swiper-slide">
@@ -179,6 +179,21 @@
           },
           autoplay: {
             delay: 5000,
+          },
+
+          breakpoints: {
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+            662: {
+              slidesPerView: 3,
+              spaceBetween: 15,
+            },
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
           },
         });
       </script>

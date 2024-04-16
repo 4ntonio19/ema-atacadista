@@ -198,14 +198,15 @@ h1 {
 }
 
 .swiper-slide > img {
-  width: 80%;
+  min-width: 150px;
+  max-width: 75%;
   height: 90px;
 }
 
 /* Estilo dos botões de navegação */
 .swiper-button-prev,
 .swiper-button-next {
-  color: black; /* Cor dos botões de navegação */
+  color: var(); /* Cor dos botões de navegação */
 }
 
 /* FOOTER */
@@ -288,6 +289,11 @@ footer {
     font-size: 1.2rem;
     margin: 0;
   }
+  /* SECTION PARCEIROS */
+  .section-parceiros > p {
+    width: 80%;
+    font-size: 0.8rem;
+  }
 }
 
 @media only screen and (max-width: 1023px) and (min-width: 768px) /* TABLET SCREEN ----------------------------------------------------------------------------------------------- */ {
@@ -359,6 +365,28 @@ footer {
     text-align: justify;
     margin: 0;
   }
+}
+
+/* SECTION CAROUSEL */
+.swiper-container {
+  width: 80%; /* Largura do carrossel */
+  height: 200px; /* Altura do carrossel */
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+/* Estilo dos slides */
+.swiper-slide {
+  width: calc((100% - 3 * 15px) / 4); /* Largura fixa de cada slide */
+  height: 150px; /* Altura dos slides */
+}
+
+.swiper-slide > img {
+  min-width: 120px;
+  max-width: 50%;
+  height: 90px;
 }
 
 @media only screen and (min-width: 1024px) /* DESKTOP SCREEN ------------------------------------------------------------------------------------------- */ {
