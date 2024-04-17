@@ -85,6 +85,13 @@ header {
   justify-content: center;
   cursor: pointer;
 }
+li > a {
+  text-decoration: none;
+  color: var(--blue);
+}
+li > a:active {
+  color: var(--blue);
+}
 
 .container-header-contacts {
   display: flex;
