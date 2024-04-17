@@ -83,6 +83,7 @@ header {
   color: var(--blue);
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }
 
 .container-header-contacts {

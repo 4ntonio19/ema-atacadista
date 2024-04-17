@@ -37,3 +37,31 @@ let swiper = new Swiper(".swiper-container", {
     },
   },
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Selecionar os links no cabeçalho
+  var quemSomosLink = document.getElementById("quem-somos-link");
+  var parceirosLink = document.getElementById("parceiros-link");
+  var contatosLink = document.getElementById("contatos-link");
+
+  // Adicionar event listeners
+  quemSomosLink.addEventListener("click", function () {
+    // Rolar até a seção "Quem Somos"
+    console.log("quem somos");
+    document
+      .getElementById("quem-somos")
+      .scrollIntoView({ behavior: "smooth" });
+  });
+
+  parceirosLink.addEventListener("click", function () {
+    console.log("parceiros");
+    // Rolar até a seção "Parceiros"
+    document.getElementById("parceiros").scrollIntoView({ behavior: "smooth" });
+  });
+
+  contatosLink.addEventListener("click", function () {
+    console.log("contatos");
+    // Rolar até a seção "Contatos"
+    document.getElementById("contatos").scrollIntoView({ behavior: "smooth" });
+  });
+});
