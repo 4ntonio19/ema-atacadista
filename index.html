@@ -4,15 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EMA Atacadista</title>
-    <link rel="stylesheet" href="css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <script src="js/scripts.js" defer></script>
     <link rel="stylesheet" href="./css/swiper-bundle.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <header>
@@ -40,7 +39,9 @@
             <div class="container-header-contacts-links">
               <!-- <a href="https://www.facebook.com" target="_blank"><img src="./assets/facebook_fill.svg" alt="logo facebook"></a> -->
               <a href="https://www.instagram.com/emaatacadista/"
-                ><img src="./assets/ins_line.svg" alt="logo instagram"
+                ><img
+                  src="./assets/instagram-logo-azul.svg"
+                  alt="logo instagram"
               /></a>
             </div>
             <a href="https://wa.me/5575999772042">
@@ -158,45 +159,60 @@
               <p>TEKBOND</p>
             </div>
           </div>
-          <!-- Botões de navegação -->
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
         </div>
+        <button class="button-cotação">Fazer cotação</button>
+      </section>
+      <section class="section-contatos">
+        <h1>FALE CONOSCO</h1>
+        <div class="contatos-card">
+          <div class="contatos-card-container">
+            <div class="contatos-card-info">
+              <h2>Entre em contato:</h2>
+
+              <p><img src="./assets/call.svg" alt="" /> (75) 99977-2042</p>
+              <p>
+                <img
+                  src="./assets/instagram-logo-branca.svg"
+                  alt=""
+                />@emaatacadista
+              </p>
+            </div>
+            <div class="contatos-card-info">
+              <h2>Ou visite nossa unidade:</h2>
+              <p>
+                Av. Barros e Almeida, 302 - Centro, Santo Antônio de Jesus - BA,
+                44430-108
+              </p>
+            </div>
+          </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.1112414392855!2d-39.26140052530717!3d-12.96473298735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x73e2b3562f0e06f%3A0x2cbae1ed891ff374!2sEma%20Atacadista!5e0!3m2!1spt-BR!2sbr!4v1713317717031!5m2!1spt-BR!2sbr"
+            width="550"
+            height="350"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
       </section>
       <footer>
-        <p>Todos os direitos reservados - EMA Atacadista</p>
+        <div class="container-footer">
+          <img
+            src="./assets/EMA - Logo Principal.png"
+            class="logo-ema"
+            alt=""
+          />
+          <p>Todos os direitos reservados - EMA Atacadista</p>
+          <a href="https://www.instagram.com/emaatacadista/" class="logo-social"
+            ><img src="./assets/instagram-logo-azul.svg" alt="" />
+          </a>
+        </div>
       </footer>
-      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-      <script>
-        // Inicialize o carrossel Swiper com configurações de loop contínuo
-        const swiper = new Swiper(".swiper-container", {
-          loop: true, // Ativa o loop contínuo
-          slidesPerView: 4, // Exibe 5 slides por vez
-          spaceBetween: 20, // Espaçamento entre os slides
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-          autoplay: {
-            delay: 5000,
-          },
-
-          breakpoints: {
-            1024: {
-              slidesPerView: 4,
-              spaceBetween: 20,
-            },
-            662: {
-              slidesPerView: 3,
-              spaceBetween: 15,
-            },
-            0: {
-              slidesPerView: 1,
-              spaceBetween: 10,
-            },
-          },
-        });
-      </script>
+      <script src="js/swiper-bundle.min.js" defer></script>
+      <script src="js/scripts.js" defer></script>
     </main>
   </body>
 </html>
