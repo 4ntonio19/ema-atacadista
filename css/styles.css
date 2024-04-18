@@ -218,15 +218,18 @@ h1 {
   color: var(); /* Cor dos botões de navegação */
 }
 
-.button-cotação {
-  padding: 12px;
+.button-cotacao {
+  padding: 15px;
   border: 1px solid var(--green);
   border-radius: 4px;
   background-color: var(--green);
-  cursor: pointer;
   color: var(--white);
-  min-width: 250px;
-  font-size: 1rem;
+  min-width: 350px;
+  font-size: 1.35rem;
+  font-weight: 400;
+  cursor: pointer;
+  align-self: center;
+  margin-top: 3rem;
 }
 
 /* SECTION CONTATOS */
@@ -237,6 +240,10 @@ h1 {
   align-items: center;
   gap: 15px;
   margin-bottom: 15px;
+}
+
+.section-contatos > h1 {
+  margin-top: 6rem;
 }
 
 .contatos-card {
@@ -263,6 +270,20 @@ h1 {
 
 p > img {
   color: var(--white);
+}
+
+.button-cliente {
+  padding: 15px;
+  border: 1px solid var(--green);
+  border-radius: 4px;
+  background-color: var(--green);
+  color: var(--white);
+  min-width: 350px;
+  font-size: 1.35rem;
+  font-weight: 400;
+  cursor: pointer;
+  align-self: center;
+  margin-top: 3rem;
 }
 
 /* FOOTER */
