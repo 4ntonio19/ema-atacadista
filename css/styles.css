@@ -306,6 +306,10 @@ footer {
   justify-content: space-between;
 }
 
+.logo-ema {
+  max-width: 10rem;
+}
+
 .logo-social {
   align-self: center;
 }
